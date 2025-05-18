@@ -191,30 +191,3 @@ whatsappLinks.forEach(link => {
 
 
 
-// Header Scroll Effect
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('.animated-header');
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
-
-// Mobile Menu Toggle
-const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-const hamburger = document.querySelector('.hamburger');
-
-mobileMenuToggle.addEventListener('click', function() {
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('active');
-});
-
-// Close menu when clicking a link
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        hamburger.classList.remove('active');
-    });
-});
